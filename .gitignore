@@ -1,0 +1,18 @@
+Fin
+.DS_Store
+
+#IDEs
+.idea
+.vscode
+
+#node artifacts
+.sass-cache
+node_modules
+package-lock.json
+yarn.lock
+
+#dist folder
+#dist
+#dist/*
+#dist/*.*
+bootstrap_old
