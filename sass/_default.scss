@@ -231,6 +231,10 @@ body {
 	height: 100px;
 
 }
+.cont-separation {
+	height: 100px;
+	background: url(./images/bg-body-2.png) no-repeat center;
+}
 .our-works,
 .list-type-sity {
 	button {
@@ -241,13 +245,44 @@ body {
 	}
 	.cont-btn {
 		flex: 1 0 20%;
+		max-width: 20%;
 		padding: 0 5px;
+
+		@media only screen and (max-width: 980px) {
+			flex: 1 0 28%;
+			max-width: 28%;
+		}
+		@media only screen and (max-width: 768px) {
+			flex: 1 0 35%;
+			max-width: 35%;
+		}
+		@media only screen and (max-width: 576px) {
+			flex: 1 0 45%;
+			max-width: 45%;
+		}
+		@media only screen and (max-width: 450px) {
+			flex: 1 0 75%;
+			max-width: 75%;
+		}
+		
+		
+
 	}
 }
 
 .list-feature {
 	.item-feature {
 		width: 130px;
+		padding-bottom: 20px;
+		@media only screen and (max-width: 980px) {
+			width: 190px
+		}
+
+		@media only screen and (max-width: 576px) {
+			width: 150px
+		}
+		
+
 		.icon-feature {
 			height: 50px;
 			background-repeat: no-repeat;
