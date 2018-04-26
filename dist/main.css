@@ -8460,12 +8460,12 @@ body {
       width: 75%;
       background-repeat: no-repeat; }
     .cont-banner .banner .bg:before {
-      background: url(images/958e10e4abf3226cea3d6c6233a08348.png);
+      background-image: url(images/958e10e4abf3226cea3d6c6233a08348.png);
       left: 0;
       margin-left: -40%;
       background-position-x: right; }
     .cont-banner .banner .bg:after {
-      background: url(images/84cf2fb0b27786386a70026536fcc17a.png);
+      background-image: url(images/84cf2fb0b27786386a70026536fcc17a.png);
       right: 0;
       margin-right: -40%;
       background-position-x: left; }
