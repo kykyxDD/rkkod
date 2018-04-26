@@ -125,13 +125,13 @@ body {
 			
 			}
 			&:before{
-			background: url(./images/banner-before.png);
+			background-image: url(./images/banner-before.png);
 			left: 0;
 		    margin-left: -40%;
 		    background-position-x: right;
 			}
 			&:after{
-			background: url(./images/banner-after.png);
+			background-image: url(./images/banner-after.png);
 			right:0;
 			margin-right: -40%;
 			background-position-x: left;
