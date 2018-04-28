@@ -8839,7 +8839,8 @@ body {
     background-color: inherit;
     color: #fff !important; }
   .header .cont-banner {
-    height: 290px; }
+    height: 290px;
+    overflow: hidden; }
 
 .cont-banner .banner {
   min-height: 100%; }
@@ -8854,22 +8855,29 @@ body {
       width: 75%;
       background-repeat: no-repeat; }
     .cont-banner .banner .bg:before {
-      background-image: url(images/958e10e4abf3226cea3d6c6233a08348.png);
+      background-image: url(images/banner-before.png);
       left: 0;
       margin-left: -40%;
       background-position-x: right; }
+      @media screen and (max-width: 991px) {
+        .cont-banner .banner .bg:before {
+          margin-left: -30%; } }
     .cont-banner .banner .bg:after {
-      background-image: url(images/84cf2fb0b27786386a70026536fcc17a.png);
+      background-image: url(images/banner-after.png);
       right: 0;
       margin-right: -40%;
       background-position-x: left; }
+      @media screen and (max-width: 991px) {
+        .cont-banner .banner .bg:after {
+          margin-right: -30%; } }
   .cont-banner .banner .content {
     z-index: 10; }
     .cont-banner .banner .content .sub-text {
       color: #717171; }
   .cont-banner .banner .cont-rocket {
-    background: url(images/28d49806fb31d4ad9d69d18faf1225ce.png) no-repeat;
-    background-position: center bottom; }
+    background: url(images/rocket.png) no-repeat;
+    background-position: center bottom;
+    background-size: contain; }
   .cont-banner .banner .btn-banner {
     color: #fff;
     background: #707afc;
@@ -8917,13 +8925,13 @@ body {
       width: 70px; } }
 
 .list-services .item-services.created .cont-icon {
-  background-image: url(images/219319290f599d83074e14ab223c2bf8.png); }
+  background-image: url(images/big-icon-created.png); }
 
 .list-services .item-services.seo .cont-icon {
-  background-image: url(images/2d7ccf3b8ea740f6fe409a14c8ec650f.png); }
+  background-image: url(images/big-icon-seo.png); }
 
 .list-services .item-services.support .cont-icon {
-  background-image: url(images/e7b96abba627e978b66b01b53fb09b7f.png); }
+  background-image: url(images/big-icon-support.png); }
 
 .list-services .item-services .item-services-ul {
   margin-left: 0;
@@ -8946,7 +8954,7 @@ body {
       background-color: #484848; }
 
 .cont-tariffs {
-  background: url(images/fcf68d1d3afd1a0b13554f4997a69559.png); }
+  background: url(images/bg-body.png); }
 
 .item-tariffs {
   -webkit-box-shadow: 0px 6px 11px 1px rgba(204, 204, 204, 0.66);
@@ -8959,9 +8967,9 @@ body {
     background-repeat: no-repeat;
     background-size: contain; }
   .item-tariffs.basic .icon-tariff {
-    background-image: url(images/0f11d02a08a1b25a318a7871281f0605.png); }
+    background-image: url(images/icon-tariff-1.png); }
   .item-tariffs.main .icon-tariff {
-    background-image: url(images/0aed0ee4e6bad61dd6bedffd75ba02a1.png); }
+    background-image: url(images/icon-tariff-2.png); }
   .item-tariffs.main .tariff-footer button {
     /*background-color: #ffbc09 !important;
 			border-color: #ffbc09 !important;*/ }
@@ -8969,7 +8977,7 @@ body {
       /*background-color: #ffbc09 !important;
 				border-color: #ffbc09 !important;*/ }
   .item-tariffs.premium .icon-tariff {
-    background-image: url(images/425b587c899e48eea44311d0df40f444.png); }
+    background-image: url(images/icon-tariff-3.png); }
   .item-tariffs .tariff-body {
     font-size: 13px;
     line-height: 16px; }
@@ -8988,7 +8996,7 @@ body {
 
 .cont-separation {
   height: 100px;
-  background: url(images/7330d0881bcf7d73503489340e68f715.png) no-repeat center; }
+  background: url(images/bg-body-2.png) no-repeat center; }
 
 .our-works button,
 .list-type-sity button {
@@ -9040,19 +9048,19 @@ body {
     font-size: 13px;
     line-height: 15px; }
   .list-feature .item-feature.feature-1 .icon-feature {
-    background-image: url(images/6f101a72a4b55663a46b9de32cb916a3.png); }
+    background-image: url(images/feature-1.png); }
   .list-feature .item-feature.feature-2 .icon-feature {
-    background-image: url(images/71810456d0f401d4aac305a32f52c0e3.png); }
+    background-image: url(images/feature-2.png); }
   .list-feature .item-feature.feature-3 .icon-feature {
-    background-image: url(images/d0bddda4a0d02cc9dfc4c02af02d754f.png); }
+    background-image: url(images/feature-3.png); }
   .list-feature .item-feature.feature-4 .icon-feature {
-    background-image: url(images/e8f1285a2f34251dfe70d8043c47fe77.png); }
+    background-image: url(images/feature-4.png); }
   .list-feature .item-feature.feature-5 .icon-feature {
-    background-image: url(images/2aa6cbf9433019806d608eb57b4843ae.png); }
+    background-image: url(images/feature-5.png); }
   .list-feature .item-feature.feature-6 .icon-feature {
-    background-image: url(images/263b5af20f456f13a8881fb37cb40a65.png); }
+    background-image: url(images/feature-6.png); }
   .list-feature .item-feature.feature-7 .icon-feature {
-    background-image: url(images/fbd227cf65a8382b77a26a95ebf2a6fa.png); }
+    background-image: url(images/feature-7.png); }
 
 .list-words .item-work {
   font-size: "Roboto";
@@ -9081,7 +9089,7 @@ body {
     line-height: 15px; }
 
 .cont-contacts {
-  background: url(images/a8faadce0952c9391c5a1caa06d1fe3d.png); }
+  background: url(images/bg-footer.png); }
   .cont-contacts .list-contacts .item-contact .icon {
     width: 100%;
     height: 40px;
@@ -9096,13 +9104,13 @@ body {
     font-size: 9px;
     line-height: 12px; }
   .cont-contacts .list-contacts .item-contact.address .icon {
-    background-image: url(images/062e662e25b8cea4917684dae9902a42.png); }
+    background-image: url(images/address.png); }
   .cont-contacts .list-contacts .item-contact.skype .icon {
-    background-image: url(images/a9f6e77de973aed4bf04b2538821a866.png); }
+    background-image: url(images/skype.png); }
   .cont-contacts .list-contacts .item-contact.email .icon {
-    background-image: url(images/f8b0a2a1b9cffc7f64c5e721f0bfdb1b.png); }
+    background-image: url(images/email.png); }
   .cont-contacts .list-contacts .item-contact.time .icon {
-    background-image: url(images/3bbca2a7d5bdde77eab091b14c288135.png); }
+    background-image: url(images/time.png); }
   .cont-contacts .form-communication input,
   .cont-contacts .form-communication textarea {
     border-radius: 24px;

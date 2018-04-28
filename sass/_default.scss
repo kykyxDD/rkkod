@@ -106,6 +106,7 @@ body {
 	}
 	.cont-banner {
 		height: 290px;
+		overflow: hidden;
 	}
 }
 .cont-banner{
@@ -125,16 +126,22 @@ body {
 			
 			}
 			&:before{
-			background-image: url(./images/banner-before.png);
-			left: 0;
-		    margin-left: -40%;
-		    background-position-x: right;
+				background-image: url(./images/banner-before.png);
+				left: 0;
+				margin-left: -40%;
+				background-position-x: right;
+				@media screen and (max-width: 991px) {
+					margin-left: -30%;
+				}
 			}
 			&:after{
-			background-image: url(./images/banner-after.png);
-			right:0;
-			margin-right: -40%;
-			background-position-x: left;
+				background-image: url(./images/banner-after.png);
+				right:0;
+				margin-right: -40%;
+				background-position-x: left;
+				@media screen and (max-width: 991px) {
+					margin-right: -30%;
+				}
 			}
 		}
 		.content {
@@ -146,6 +153,7 @@ body {
 		.cont-rocket {
 			background: url(./images/rocket.png) no-repeat;
 			background-position: center bottom;
+			background-size: contain;
 		}
 		.btn-banner {
 			color:#fff;

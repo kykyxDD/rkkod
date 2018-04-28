@@ -46,7 +46,7 @@ module.exports = {
       {
         test: /\.(png|jpg)$/,
         loaders: [
-          'file-loader?name=images/[hash].[ext]'
+          'file-loader?name=images/[name].[ext]'
         ]
       },
       {
@@ -115,19 +115,6 @@ module.exports = {
   },
   plugins: [
     new UglifyJsPlugin(), // Default settings should be fine
-    new ExtractText('[name].css')/*,
-    new SpritesmithPlugin({
-        src: {
-            cwd: path.resolve(__dirname, 'images'),
-            glob: '*.png'
-        },
-        target: {
-            image: path.resolve(__dirname, 'images/sprite.png'),
-            css: path.resolve(__dirname, 'sass/_sprites.sass')
-        },
-        apiOptions: {
-            cssImageRef: "~sprite.png"
-        }
-    })*/
+    new ExtractText('[name].css')
   ]
 }

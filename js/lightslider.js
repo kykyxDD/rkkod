@@ -29,7 +29,7 @@
         verticalHeight: 500,
         vThumbWidth: 100,
         thumbItem: 10,
-        pager: false,
+        pager: true,
         gallery: false,
         galleryMargin: 5,
         thumbMargin: 5,
