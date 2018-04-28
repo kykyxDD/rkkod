@@ -2,9 +2,54 @@
 	<div class="rkkod-container py-4 px-3">
 
 	<div class=" h2 line-bottom text-center text-uppercase mb-5">Поддержка любых систем управления</div>
-	<div class="cont-list-cms w-100 ">
-		
+	<div class="cont-list-cms w-100 d-flex align-items-center">
+		<ul id="content-slider" class="content-slider">
+			<li>
+				<img src="./images/cms/modx.png" alt="">
+			</li>
+			<li>
+				<img src="./images/cms/magento_logo.png" alt="">
+			</li>
+			<li>
+				<img src="./images/cms/umi-cms.png" alt="">	
+			</li>
+			<li>
+				<img src="./images/cms/wordpresi.png" alt="">	
+			</li>
+			<li>
+				<img src="./images/cms/joomla-logo.png" alt="">	
+			</li>
+			<li>
+				<img src="./images/cms/drupal-logo.png" alt="">	
+			</li>
+			<li>
+				<img src="./images/cms/opencart-logo.png" alt="">	
+			</li>
+			<li>
+				<img src="./images/cms/1c-bitrix.png" alt="">	
+			</li>
+			<li>
+				<img src="./images/cms/netcat_logo.png" alt="">	
+			</li>
+		</ul>
 	</div>
+
+	<script>
+		 $(document).ready(function(){
+			$('#content-slider').lightSlider({
+				keyPress:false,
+				// item:4,
+				autoWidth: true,
+				prevHtml:'<i class="fa fa-arrow-circle-left fa-2x" aria-hidden="true"></i>',
+				nextHtml:'<i class="fa fa-arrow-circle-right fa-2x" aria-hidden="true"></i>',
+				pager:false,
+				loop:true,
+				onSliderLoad: function() {
+					$('#content-slider').removeClass('cS-hidden');
+				} 
+			})
+		})
+	</script>
 
 	</div>
 </div>

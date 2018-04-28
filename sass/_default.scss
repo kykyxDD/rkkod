@@ -465,3 +465,13 @@ body {
 .text-white {
 	color: #fff;
 }
+
+
+
+.content-slider {
+	li {
+		height: 100%;
+		display: flex;
+		align-items: center;
+	}
+}
