@@ -11,7 +11,7 @@
 }
 
 body {
-	font-family: "Oswald", Roboto;
+	font-family: "Oswald", Roboto !important;
 }
 .rkkod-container {
 	width: 100%;
@@ -149,6 +149,14 @@ body {
 			.sub-text {
 				color: #717171
 			}
+		}
+		.cont-text {
+			opacity: 0;
+			
+			transition: opacity 0.3s;
+		}
+		&.show .cont-text{
+			opacity: 1;
 		}
 		.cont-rocket {
 			background: url(./images/rocket.png) no-repeat;

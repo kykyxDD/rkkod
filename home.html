@@ -11,7 +11,8 @@
 	
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	
-	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
 	<script src="https://momentjs.com/downloads/moment.js"></script>
 	<!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script> -->
 	<script type="text/javascript" src='./dist/main.js'></script>
@@ -22,6 +23,10 @@
 	
 	<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>  
 	<link href="https://fonts.googleapis.com/css?family=Oswald:300&amp;subset=cyrillic" rel="stylesheet">
+	
+	<!-- 
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous"> -->
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
 </head>
 <body class="">
 <div class="w-100 header">
@@ -71,18 +76,19 @@
     <div class="content d-flex w-100">
       <div class="cont-text col-8 align-self-center">
         <div class="my-auto">
-        <h1>Выгодный март - <span class="line-bottom">10</span>%</h1>
-        <div class="font-family-roboto mb-4 sub-text">Закажите <span class="text-primary ">seo-продвижение</span><br>
-        и техподдержку со скидкой
-        </div>
-        <div >
-        <button type="button" class='btn btn-banner px-4 py-0 text-uppercase  '>подробнее об акции</button>
-        </div>
+          <h1 class="banner-title"></h1>
+          <div class="font-family-roboto mb-4 banner-subtitle sub-text"></div>
+          <div >
+            <a href="#" class='btn btn-banner px-4 py-0 text-uppercase  '>подробнее об акции</a>
+          </div>
         </div>
       </div>
       <div class="cont-rocket col-4"></div>
     </div>
   </div>
+  <script type="text/javascript">
+    var script_banner = new BannerSlider();
+  </script>
 </div>
 </div>
 </div>

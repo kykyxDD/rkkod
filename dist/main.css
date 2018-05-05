@@ -440,7 +440,7 @@ html {
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
   -ms-overflow-style: scrollbar;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
+  -webkit-tap-highlight-color: transparent; }
 
 @-ms-viewport {
   width: device-width; }
@@ -8763,7 +8763,7 @@ a.text-dark:hover, a.text-dark:focus {
   clip: auto; }
 
 body {
-  font-family: "Oswald", Roboto; }
+  font-family: "Oswald", Roboto !important; }
 
 .rkkod-container {
   width: 100%;
@@ -8874,6 +8874,11 @@ body {
     z-index: 10; }
     .cont-banner .banner .content .sub-text {
       color: #717171; }
+  .cont-banner .banner .cont-text {
+    opacity: 0;
+    transition: opacity 0.3s; }
+  .cont-banner .banner.show .cont-text {
+    opacity: 1; }
   .cont-banner .banner .cont-rocket {
     background: url(images/rocket.png) no-repeat;
     background-position: center bottom;
