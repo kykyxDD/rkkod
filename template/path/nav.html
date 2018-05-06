@@ -8,6 +8,8 @@
     	<span class="navbar-toggler-icon "></span>
   	</button>
 
+
+    <!-- меню (начало) -->
   	<div class="collapse navbar-collapse" id="navbar1">
     	<ul class="navbar-nav w-100 justify-content-between">
 		    <li class="nav-item">
@@ -36,8 +38,8 @@
           <a class="nav-link back-call" href="#"><i class="fa fa-mobile fa-lg mr-2" aria-hidden="true"></i> Обратный звонок</a>
         </li>
     	</ul>
-    	
   	</div>
+    <!-- меню (конец) -->
 </nav>
 <div class="cont-banner py-4">
   <div class="banner col-10 mx-auto position-relation  text-uppercase d-flex">
@@ -56,7 +58,10 @@
     </div>
   </div>
   <script type="text/javascript">
-    var script_banner = new BannerSlider();
+    // скрипт будет искать элементы (banner, banner-title, banner-subtitle, btn-banner) и потом с ними работать(обновлять информацию в них )
+    var script_banner = new BannerSlider({
+      urlJsonBanner: './jsonSlider.json' // можно не указывать, по умолчанию стоит './jsonSlider.json'
+    });
   </script>
 </div>
 </div>

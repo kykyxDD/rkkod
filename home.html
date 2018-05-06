@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html prefix="og: http://ogp.me/ns#">
 <head>
+
+	<!-- все файлы, которые надо подключать -->
 	<title></title>
 	<meta charset="utf-8">
 	
@@ -11,24 +13,36 @@
 	
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	
-	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
-	<script src="https://momentjs.com/downloads/moment.js"></script>
-	<!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script> -->
-	<script type="text/javascript" src='./dist/main.js'></script>
+	
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" ></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" ></script>
 	
 	
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+	
+	<!-- Коллекция иконок -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	
+	<!-- Файлы для подключение слайдера со списком систем управления сайта -->
+	<script type="text/javascript" src='./js/lightslider.js'></script>
+	<link rel="stylesheet" type="text/css" href="./dist/lightslider.css">
+	
+	<!-- Скрипт для переключения слайдов в баннере -->
+	<script type="text/javascript" src='./js/bannerSlider.js'></script>
+	
+	
+	
+	<!-- Стили для сайта -->
 	<link rel="stylesheet" type="text/css" href="./dist/main.css">
-	
 	
 	<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>  
 	<link href="https://fonts.googleapis.com/css?family=Oswald:300&amp;subset=cyrillic" rel="stylesheet">
-	
-	<!-- 
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous"> -->
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
 </head>
 <body class="">
+
+
+<!-- Меню и баннет (начало) -->
 <div class="w-100 header">
 <div class="rkkod-container">
 <nav class="navbar navbar-expand-lg navbar-dark bg-none ">
@@ -39,6 +53,8 @@
     	<span class="navbar-toggler-icon "></span>
   	</button>
 
+
+    <!-- меню (начало) -->
   	<div class="collapse navbar-collapse" id="navbar1">
     	<ul class="navbar-nav w-100 justify-content-between">
 		    <li class="nav-item">
@@ -67,8 +83,8 @@
           <a class="nav-link back-call" href="#"><i class="fa fa-mobile fa-lg mr-2" aria-hidden="true"></i> Обратный звонок</a>
         </li>
     	</ul>
-    	
   	</div>
+    <!-- меню (конец) -->
 </nav>
 <div class="cont-banner py-4">
   <div class="banner col-10 mx-auto position-relation  text-uppercase d-flex">
@@ -87,12 +103,18 @@
     </div>
   </div>
   <script type="text/javascript">
-    var script_banner = new BannerSlider();
+    // скрипт будет искать элементы (banner, banner-title, banner-subtitle, btn-banner) и потом с ними работать(обновлять информацию в них )
+    var script_banner = new BannerSlider({
+      urlJsonBanner: './jsonSlider.json' // можно не указывать, по умолчанию стоит './jsonSlider.json'
+    });
   </script>
 </div>
 </div>
 </div>
+<!-- Меню и баннет (конец) -->
 
+
+<!-- МЫ ПОЗАБОТИМСЯ О ВАШЕМ САЙТЕ (начало) -->
 <div class="w-100 ">
 <div class="rkkod-container pt-5 pb-4 ">
 <div class="text-center text-uppercase pb-2 px-3">
@@ -151,10 +173,15 @@
 
 </div>
 </div>
+<!-- МЫ ПОЗАБОТИМСЯ О ВАШЕМ САЙТЕ (конец) -->
+
+
+<!-- Список тарифов (начало) -->
 <div class="w-100 cont-tariffs">
 	<div class="rkkod-container py-3 pb-4 ">
 		<div class="d-flex flex-wrap px-3 mb-3 justify-content-center">
 			<div class="col-lg-4 px-2 col-md-6 col-sm-8 col-11 mb-4">
+				<!-- класс "basic" указывает какую картинку показывать этого тарифа-->
 				<div class='w-100 bg-white item-tariffs basic py-4 px-3'>
 					<div class="tariff-header d-flex mb-4">
 						<div class="icon-tariff"></div>
@@ -165,8 +192,11 @@
 					</div>
 					<div class="tariff-body font-family-roboto">
 						<div>
+					
 							<div class="d-flex mb-3">
+					
 								<div>
+									<!-- показывается галочка(fa fa-check-circle) и закрашивается зеленным (text-success) -->
 									<i class="fa fa-check-circle mr-3 text-success" aria-hidden="true"></i>
 								</div>
 								<div>Мониторинг работоспособности
@@ -174,15 +204,22 @@
 							</div>
 							<div class="d-flex mb-3">
 								<div>
+									<!-- показывается крестик (fa fa-times-circle) и закрашивается красным (text-danger) -->
 									<i class="fa fa-times-circle text-danger mr-3" aria-hidden="true"></i>
 								</div>
 								<div class="text-secondary">
+								<!-- цвет серый -->
 								Оперативное устранение ошибко и технических сбоев
 								</div>
 							</div>
 						</div>
 						<div class="pt-4 pb-5">
-							<div class="d-flex">
+							<div class="d-flex mb-3">
+								<div class="col-4 h6 pl-3">3</div>
+								<div class="col-8">Количество нормо-часов всех специалистов в месяц</div>
+							</div>
+					
+							<div class="d-flex mb-3">
 								<div class="col-4 h6 pl-3">3</div>
 								<div class="col-8">Количество нормо-часов всех специалистов в месяц</div>
 							</div>
@@ -194,6 +231,7 @@
 				</div>
 			</div>
 			<div class="col-lg-4 px-2 col-md-6 col-sm-8 col-11 mb-4">
+				<!-- класс "main" указывает какую картинку показывать этого тарифа-->
 				<div class='w-100 bg-white item-tariffs main py-4 px-3'>
 					<div class="tariff-header d-flex mb-4">
 						<div class="icon-tariff"></div>
@@ -204,8 +242,11 @@
 					</div>
 					<div class="tariff-body font-family-roboto">
 						<div>
+					
 							<div class="d-flex mb-3">
+					
 								<div>
+									<!-- показывается галочка(fa fa-check-circle) и закрашивается зеленным (text-success) -->
 									<i class="fa fa-check-circle mr-3 text-success" aria-hidden="true"></i>
 								</div>
 								<div>Мониторинг работоспособности
@@ -213,15 +254,22 @@
 							</div>
 							<div class="d-flex mb-3">
 								<div>
+									<!-- показывается крестик (fa fa-times-circle) и закрашивается красным (text-danger) -->
 									<i class="fa fa-times-circle text-danger mr-3" aria-hidden="true"></i>
 								</div>
 								<div class="text-secondary">
+								<!-- цвет серый -->
 								Оперативное устранение ошибко и технических сбоев
 								</div>
 							</div>
 						</div>
 						<div class="pt-4 pb-5">
-							<div class="d-flex">
+							<div class="d-flex mb-3">
+								<div class="col-4 h6 pl-3">3</div>
+								<div class="col-8">Количество нормо-часов всех специалистов в месяц</div>
+							</div>
+					
+							<div class="d-flex mb-3">
 								<div class="col-4 h6 pl-3">3</div>
 								<div class="col-8">Количество нормо-часов всех специалистов в месяц</div>
 							</div>
@@ -233,6 +281,7 @@
 				</div>
 			</div>
 			<div class="col-lg-4 px-2 col-md-6 col-sm-8 col-11 mb-4">
+				<!-- класс "premium" указывает какую картинку показывать этого тарифа-->
 				<div class='w-100 bg-white item-tariffs premium py-4 px-3'>
 					<div class="tariff-header d-flex mb-4">
 						<div class="icon-tariff"></div>
@@ -243,8 +292,11 @@
 					</div>
 					<div class="tariff-body font-family-roboto">
 						<div>
+					
 							<div class="d-flex mb-3">
+					
 								<div>
+									<!-- показывается галочка(fa fa-check-circle) и закрашивается зеленным (text-success) -->
 									<i class="fa fa-check-circle mr-3 text-success" aria-hidden="true"></i>
 								</div>
 								<div>Мониторинг работоспособности
@@ -252,15 +304,22 @@
 							</div>
 							<div class="d-flex mb-3">
 								<div>
+									<!-- показывается крестик (fa fa-times-circle) и закрашивается красным (text-danger) -->
 									<i class="fa fa-times-circle text-danger mr-3" aria-hidden="true"></i>
 								</div>
 								<div class="text-secondary">
+								<!-- цвет серый -->
 								Оперативное устранение ошибко и технических сбоев
 								</div>
 							</div>
 						</div>
 						<div class="pt-4 pb-5">
-							<div class="d-flex">
+							<div class="d-flex mb-3">
+								<div class="col-4 h6 pl-3">3</div>
+								<div class="col-8">Количество нормо-часов всех специалистов в месяц</div>
+							</div>
+					
+							<div class="d-flex mb-3">
 								<div class="col-4 h6 pl-3">3</div>
 								<div class="col-8">Количество нормо-часов всех специалистов в месяц</div>
 							</div>
@@ -275,6 +334,10 @@
 
 	</div>
 </div>
+<!-- Список тарифов (конец) -->
+
+
+<!-- ПОДДЕРЖКА ЛЮБЫХ СИСТЕМ УПРАВЛЕНИЯ (начало) -->
 <div class="w-100 cont-cms">
 	<div class="rkkod-container py-4 px-3">
 
@@ -330,7 +393,10 @@
 
 	</div>
 </div>
+<!-- ПОДДЕРЖКА ЛЮБЫХ СИСТЕМ УПРАВЛЕНИЯ (конец) -->
 
+
+<!-- СОЗДАНИЕ САЙТА с кнопками (начало) -->
 <div class="w-100 cont-separation"></div>
 
 <div class="w-100 ">
@@ -358,6 +424,10 @@
 </div>
 </div>
 </div>
+<!-- СОЗДАНИЕ САЙТА с кнопками (конец) -->
+
+
+<!-- Наши работы (начало) -->
 <div class="w-100 our-works">
 <div class="rkkod-container py-5 ">
 <div class="text-center text-uppercase px-3">
@@ -481,6 +551,10 @@
 </div>
 </div>
 </div>
+<!-- Наши работы (конец) -->
+
+
+<!-- Форма связи (начало) -->
 <div class="w-100 cont-contacts border-top-secondary">
 <div class="rkkod-container pt-5 pb-3">
 <div class="w-100 d-flex flex-wrap flex-column-reverse flex-md-row">
@@ -525,5 +599,6 @@
 </div>
 </div>
 </div>
+<!-- Форма связи (конец) -->
 </body>
 </html>

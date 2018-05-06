@@ -1,5 +1,5 @@
 function BannerSlider (params){
-	this.url = './jsonSlider.json';
+	this.url = params && params.urlJsonBanner ? params.urlJsonBanner : './jsonSlider.json';
 	var id_parent = params && params.idElem ? params.idElem : '.banner';
 	this.parent = document.querySelector(id_parent)
 	console.log(this.parent)
